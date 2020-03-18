@@ -2,7 +2,7 @@ import re
 
 
 class Tinkerhub:
-    'Common base class for all employees'
+    'Class to allot Mentors to Learners'
     Name = 'NIL'
     Position = 'NIL'
     Time = []
@@ -42,7 +42,6 @@ class Tinkerhub:
             print()
             temp = re.findall(r'\d+', Time_string)
             self.Time = list(map(int, temp))
-#            print(self.Time)
         print('\n\t\t Congratulations!\n\t You are registered as', self.Position,'\n\n')
     
     def getMentor(check=0):
@@ -69,5 +68,5 @@ for obj in range(num):
     t[obj].setMentorOrLearner(0, 0)
     t[obj].addStacks('NIL')
     t[obj].setAvailableTime('NIL')
-#t.setAvailableTime()
+
 Tinkerhub.getMentor()
